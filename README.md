@@ -27,3 +27,11 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Ponomar.  If not, see <http://www.gnu.org/licenses/>.
 
+===
+For Installation instructions, see the INSTALL file.
+For detailed Documentation, see docen.pdf
+For Russian installation instructions, see the RUSSIAN file.
+For Documentation in Russian, see docru.pdf
+
+Документация на русском языке находится в файле RUSSIAN.
+

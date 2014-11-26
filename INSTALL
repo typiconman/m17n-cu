@@ -1,0 +1,165 @@
+Copyright 2014 Aleksandr Andreev,
+with portions Copyright 2014 Daniel Dremachyov, Yuri Shardt, Nikita Simmons.
+
+   This file is free documentation; the authors give
+unlimited permission to copy, distribute and modify it.
+
+Description
+=============================
+
+The package that you have downloaded contains Church Slavic keyboard drivers
+for Intelligent Input Bus (IBus), an input method framework for GNU/Linux and 
+other Unix-like Operating Systems. The package works by adding Church Slavic
+data to the  m17n library, which realizes multilingualization for 
+GNU-Linux/Unix applications.
+
+If you use Microsoft Windows or Apple OS X, this is NOT the package you need. 
+Please see http://www.ponomar.net/ for software for other operating systems.
+
+Installation Instructions
+=============================
+
+Step 1. Download and install the the ibus-m17n package.
+On most distributions, this can be done from the package manager, e.g.:
+
+$ sudo apt-get install ibus-m17n 
+
+Or you can download the latest source code from here:
+https://code.google.com/p/ibus/
+
+and follow the installation instructions there.
+
+Step 2. Set IBus to be your default input method
+This is done by running:
+
+$ im-config
+
+and selecting ibus
+
+Step 3. Check that your m17n library installation is sane.
+The m17n data should be installed in your /usr/share/m17n/ directory:
+
+$ ls /usr/share/m17n/
+
+If not, you will need to find your m17n data directory and modify 
+lines 2 and 3 of Makefile in the directory where you downloaded this package.
+
+Step 4. Install the Slavonic m17n data:
+
+In the directory where you have downloaded the files of this package, run:
+
+$ sudo make install
+
+This copies cu-kbd.mim and a number of other data files to your m17n data directory.
+
+Step 5. Log out from your session and log back in.
+
+IBus will re-read the m17n data directory and find the newly installed data files.
+
+Step 6. Load the Slavonic input method
+
+Run:
+
+$ ibus-setup
+
+On the Input Method tab, check Customize active input methods.
+Click on Select input method.
+Click on Show all input methods.
+Scroll down and select Church Slavic; Old Slavonic; Old Church Slavonic
+Select the kbd variant (the only variant currently available)
+Click Add
+Click Close
+
+Installation should be complete.
+
+Usage instructions
+============================
+
+By default, IBus can be turned off and on by hitting Ctrl+Space.
+
+By default, you can switch between input methods by hitting Ctrl+Shift+Space.
+
+You can customize these keyboard shortcuts by running:
+
+$ ibus-setup
+
+and changing the options on the General tab.
+
+The Slavonic input method is described in detail in docen.pdf.
+
+If you are doing serious work typesetting Church Slavic, you should read
+our Roadmap for Slavonic Typography in the Unicode Standard, available on
+http://www.ponomar.net/
+
+We also suggest installing the Hirmos Ponomar and other Unicode fonts.
+
+
+Modification instructions
+============================
+
+This software is FREE SOFTWARE, and that means that you are free to
+modify it under the terms of the GNU General Public License.
+
+Should you choose to modify the keyboard layout, note that:
+
+The file that contains the input method data is cu-kbd.mim.
+It is written in a LIPS-like language.
+The format is fairly self-explanatory.
+For details, see the m17n library documentation at:
+http://www.nongnu.org/m17n/
+
+
+Uninstallation instructions
+============================
+
+Should you wish to remove the software:
+
+Step 1. 
+
+Run 
+
+$ ibus-setup
+
+Go to the Input Method tab
+Click on Church Slavic; Old Slavonic; Old Church Slavonic;
+Click Remove
+Click Close
+
+Step 2.
+
+You can get rid of IBus by running
+
+$ im-config
+
+and selecting a different input method.
+
+Step 3.
+
+You can get rid of the m17n Slavonic data by running:
+
+$ sudo make uninstall
+
+from the directory where you downloaded the source code.
+
+Or you can delete the files by hand from your m17n data directory,
+which is usually /usr/share/m17n/
+
+You assume all responsibility for any rm commands you run as sudo.
+Please be careful.
+
+Bug reports, Comments, etc.
+============================
+
+Post an issue on:
+ https://github.com/typiconman/m17n-cu/issues
+
+
+Warranty 
+============================
+
+This software is distributed in AS-IS condition, with ABSOLUTELY
+NO WARRANTY of any kind; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+
