@@ -12,7 +12,9 @@ The following is supported:
 
 This software is part of the Ponomar Project's Slavonic Computing Initiative. See http://www.ponomar.net/cu_support.html for more information.
 
-Copyright 2014 Aleksandr Andreev. This software is part of the Ponomar Project.
+Copyright 2014 Aleksandr Andreev.
+Portions Copyright 2014 Daniel Dremachyov, Yuri Shardt, Nikita Simmons, et al.
+This software is part of the Ponomar Project.
 
 Ponomar is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -31,7 +33,5 @@ along with Ponomar.  If not, see <http://www.gnu.org/licenses/>.
 For Installation instructions, see the INSTALL file.
 For detailed Documentation, see docen.pdf
 For Russian installation instructions, see the RUSSIAN file.
-For Documentation in Russian, see docru.pdf
-
 Документация на русском языке находится в файле RUSSIAN.
 
