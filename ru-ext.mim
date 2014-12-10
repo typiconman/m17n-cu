@@ -1,0 +1,242 @@
+;; ru-ext.mim -- Russian Extended input method based on Russian keyboard layout
+;;   Copyright (C) 2014 Aleksandr Andreev
+;;   Based in part on Russian input method Copyright (C) 2005
+;;   National Institute of Advanced Industrial Science and Technology (AIST)
+;;   Registration Number H15PRO112
+
+;; This file is part of the Ponomar Project. See http://www.ponomar.net/.
+
+;; Ponomar is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation; either version 2, or (at
+;; your option) any later version.
+
+;; Ponomar is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with Ponomar; see the file LICENSE.  If not, write to
+;; the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+;;; Input method for Church Slavic by extending the Russian keyboard.
+;;;
+;;; @image html ru-ext.png "Keyboard Layout"
+;;; @image latex ru-ext.eps "Keyboard Layout" width=\narrowwidth
+
+;;; XXX: This Code uses certain components scheduled for inclusion in a future
+;;; version of the Unicode standard. See http://www.unicode.org/alloc/Pipeline.html for info.
+;;; As such, it is BETA-STAGE SOFTWARE and is intended for software testing purposes ONLY.
+
+(input-method ru ext)
+
+(author "Ponomar Project SCI")
+
+(description
+ "Extended Russian input method for typing modern and historical Cyrillic.
+ DEAD 1! 2\" 3№ 4; 5% 6: 7? 8* 9( 0) -_ =+ 
+     Й  Ц  У  К  Е  Н  Г  Ш  Щ  З  Х  Ъ  \\/
+      Ф  Ы  В  А  П  Р  О  Л  Д  Ж  Э
+       Я  Ч  С  М  И  Т  Ь  Б  Ю  .,
+ Dead key converts letter to superscript (without pokrytie).
+Historical letters and commonly used superscripts (with pokrytie) on
+Alt and AltShift:
+ Ё  ҂[zwj] ◌҃꙾   ◌̀◌҆̀ ◌҇꙾  ◌҆◌̑  ◌̏◌᷀  ◌́◌҆́ ѿѾ ѡѠ ᲂ ⷪ҇ ꙍꙌ ꙳✠ 
+   їЇ  ꙁꙀ ꙋꙊ  ѯѮ  єЄ  ⷩ҇🕀   ⷢ҇🕁  ⷲ҇🕂   ⷳ҇🕃  ѕЅ  ⷯ🕄  ̾ⸯ  ѽѼ
+      ѳѲ ѵѴ   ⷡ҇ᲀ  ꙗꙖ  ѱѰ   ⷬ҇  ѻѺ  ⷧ҇  ⷣᲁ  ⷤ  ѣѢ
+              ѧѦ џЏ  ⷭ҇ᲃ  ⷨ🕅 іІ ᲅᲄ   ꙽ꙿ   ⷠ҇  ѫѪ  Ꙟꙟ 
+")
+
+(title "RU")
+
+(map
+ (map
+  ("`" 0x25CC)  ;; this is the dead key
+  ("q" ?й)
+  ("w" ?ц)
+  ("e" ?у)
+  ("r" ?к)
+  ("t" ?е)
+  ("y" ?н)
+  ("u" ?г)
+  ("i" ?ш)
+  ("o" ?щ)
+  ("p" ?з)
+  ("[" ?х)
+  ("]" ?ъ)
+  ("a" ?ф)
+  ("s" ?ы)
+  ("d" ?в)
+  ("f" ?а)
+  ("g" ?п)
+  ("h" ?р)
+  ("j" ?о)
+  ("k" ?л)
+  ("l" ?д)
+  (";" ?ж)
+  ("'" ?э)
+  ("\\" ?\\)
+  ("z" ?я)
+  ("x" ?ч)
+  ("c" ?с)
+  ("v" ?м)
+  ("b" ?и)
+  ("n" ?т)
+  ("m" ?ь)
+  ("," ?б)
+  ("." ?ю)
+  ("/" ?.)
+  ("!" ?!)
+  ("@" ?\") ;"
+  ("#" ?№)
+  ("$" ?\;)
+  ("%" ?%)
+  ("^" ?:)
+  ("&" ??)
+  ("*" ?*)
+  ("(" ?\()
+  (")" ?\))
+  ("_" ?_)
+  ("+" ?+)
+  ("~" 0x25CC)  ;; this is reserved for a future dead state
+  ("Q" ?Й)
+  ("W" ?Ц)
+  ("E" ?У)
+  ("R" ?К)
+  ("T" ?Е)
+  ("Y" ?Н)
+  ("U" ?Г)
+  ("I" ?Ш)
+  ("O" ?Щ)
+  ("P" ?З)
+  ("{" ?Х)
+  ("}" ?Ъ)
+  ("A" ?Ф)
+  ("S" ?Ы)
+  ("D" ?В)
+  ("F" ?А)
+  ("G" ?П)
+  ("H" ?Р)
+  ("J" ?О)
+  ("K" ?Л)
+  ("L" ?Д)
+  (":" ?Ж)
+  ("\"" ?Э)
+  ("|" ?/)
+  ("Z" ?Я)
+  ("X" ?Ч)
+  ("C" ?С)
+  ("V" ?М)
+  ("B" ?И)
+  ("N" ?Т)
+  ("M" ?Ь)
+  ("<" ?Б)
+  (">" ?Ю)
+  ("?" ?,)
+;; AltGr and AltGr+Shift levels
+   ((A-`) ?ё) ((A-~) ?Ё)
+   ((A-1) 0x0482) ((A-!) 0x200D)
+   ((A-2) 0x0483) ((A-@) 0xA67E)
+   ((A-3) 0x0300) ((A-#) 0x0486 0x0300)
+   ((A-4) 0x0487) ((A-$) 0xA67C)
+   ((A-5) 0x0486) ((A-%) 0x0311)
+   ((A-6) 0x030F) ((A-^) 0x1DC0)
+   ((A-7) 0x0301) ((A-&) 0x0486 0x0301)
+   ((A-8) 0x047F) ((A-*) 0x047E)
+   ((A-9) 0x0461) ((A-\() 0x0460)
+   ((A-0) 0x01C82) ((A-\)) 0x2DEA 0x0487)
+   ((A--) 0xA64D) ((A-_) 0xA64C)
+   ((A-=) 0xA673) ((A-+) 0x2720)
+    ((A-q) 0x0456 0x0308) ((A-Q) 0x0406 0x0308)
+   ((A-w) 0xA641) ((A-W) 0xA640)
+    ((A-e) 0xA64B) ((A-E) 0xA64A)
+   ((A-r) 0x046F) ((A-R) 0x046E)
+   ((A-t) 0x0454) ((A-T) 0x0404)
+   ((A-y) 0x2DE9 0x0487) ((A-Y) 0x1F540)
+   ((A-u) 0x2DE2 0x0487) ((A-U) 0x1F541)
+   ((A-i) 0x2DF2 0x0487) ((A-I) 0x1F542)
+    ((A-o) 0x2DF3 0x0487) ((A-O) 0x1F543)
+   ((A-p) 0x0455) ((A-P) 0x0405)
+    ((A-[) 0x2DEF) ((A-{) 0x1F544)
+   ((A-]) 0x033E) ((A-}) 0x2E2F)
+   ((A-\\) 0x047D) ((A-|) 0x047C)
+   ((A-a) 0x0473) ((A-A) 0x0472)
+    ((A-s) 0x0475) ((A-S) 0x0474)
+   ((A-d) 0x2DE1) ((A-D) 0x1C80)
+   ((A-f) 0xA657) ((A-F) 0xA656)
+   ((A-g) 0x0471) ((A-G) 0x0470)
+   ((A-h) 0x2DEC)
+   ((A-j) 0x047B) ((A-J) 0x047A)
+   ((A-k) 0x2DE7)
+   ((A-l) 0x2DE3) ((A-L) 0x1C81)
+   ((A-\;) 0x2DE4)
+   ((A-') 0x0463) ((A-\") 0x0462) ;;"
+   ((A-z) 0x0467) ((A-Z) 0x0466)
+    ((A-x) 0x045F) ((A-X) 0x040F)
+   ((A-c) 0x2DED) ((A-C) 0x1C83)
+   ((A-v) 0x2DE8) ((A-V) 0x1F545)
+   ((A-b) 0x0456) ((A-B) 0x0406)
+   ((A-n) 0x1C85) ((A-N) 0x1C84)
+   ((A-m) 0xA67D) ((A-M) 0xA67F)
+   ((A-,) 0x2DE0 0x0487)
+   ((A-.) 0x046B) ((A->) 0x046A)
+   ((A-/) 0xA65F) ((A-?) 0xA65E)
+   ;; Shift-space and Alt-space
+  ((S-\ ) 0x00A0)		; no-break space
+  ((A-\ ) 0x202F)		; narrow no-break space
+ ;; implementation of the dead key. This key creates superscript letters
+   ("`f" 0x2DF6)   ("`F" 0x2DF6)
+   ("`," 0x2DE0)   ("`<" 0x2DE0)
+   ("`d" 0x2DE1)  ("`D"  0x2DE1)
+   ("`u" 0x2DE2)  ("`U"  0x2DE2)
+   ("`l" 0x2DE3)   ("`L" 0x2DE3)
+   ("`t" 0x2DF7)  ("`T" 0x2DF7)
+   ((` A-t) 0xA674)  ((` A-T) 0xA674)
+   ("`;" 0x2DE4)  ("`:"  0x2DE4)
+   ("`p" 0x2DE5) ("`P" 0x2DE5)
+   ("`b" 0xA675)  ("`B" 0xA675)
+   ("`q" 0xA675)  ("`Q" 0xA675)
+   ((` A-b) 0xA676)  ((` A-B) 0xA676)
+   ("`r" 0x2DE6)  ("`R" 0x2DE6)
+   ("`k" 0x2DE7)  ("`K" 0x2DE7)
+   ("`v" 0x2DE8)  ("`V"  0x2DE8)
+   ("`y" 0x2DE9)  ("`Y"  0x2DE9)
+   ("`j" 0x2DEA)  ("`J" 0x2DEA)
+   ((` A-j) 0x2DEA) ((` A-J) 0x2DEA)
+   ((` A-0) 0x2DEA)
+   ((` A-9) 0xA67B) ((` A-\() 0xA67B)
+   ((` A-\-) 0xA67B)  ((` A-_) 0xA67B)
+   ("`g" 0x2DEB) ("`G" 0x2DEB)
+   ("`h" 0x2DEC)  ("`H"  0x2DEC)
+   ("`c" 0x2DED)  ("`C"  0x2DED)  ((` A-C) 0x2DED)
+   ("`n" 0x2DEE)  ("`N"  0x2DEE)
+   ((` A-n) 0x2DEE) ((` A-N) 0x2DEE)
+   ("`e" 0xA677) ("`E" 0xA677)
+   ((` A-e) 0x2DF9)  ((` A-E) 0x2DF9)
+   ("`a" 0xA69E) ("`A" 0xA69E)
+   ("`[" 0x2DEF)  ("`{"  0x2DEF)
+   ("`w" 0x2DF0)  ("`W"  0x2DF0)
+   ("`x" 0x2DF1)  ("`X"  0x2DF1)
+   ("`i" 0x2DF2)  ("`I" 0x2DF2)
+   ("`o" 0x2DF3)  ("`O" 0x2DF3)
+   ("`]" 0xA678) ("`}" 0xA678)
+   ("`s" 0xA679) ("`S" 0xA679)
+   ("`m" 0xA67A) ("`M" 0xA67A)
+   ("`'" 0x2DFA) ("`\"" 0x2DFA)
+   ("`." 0x2DFB) ("`>" 0x2DFB)
+   ((` A-z) 0x2DFD) ((` A-Z) 0x2DFD)
+   ((` A-f) 0x2DFC) ((` A-F) 0x2DFC)
+   ((` A-.) 0x2DFE) ((` A->) 0x2DFE)
+   ((` A-a) 0x2DF4) ((` A-A) 0x2DF4)
+))
+
+(state
+ (init
+  (map)))
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: lisp
+;; End:
