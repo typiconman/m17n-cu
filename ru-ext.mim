@@ -35,18 +35,19 @@
 (author "Ponomar Project SCI")
 
 (description
- "Extended Russian input method for typing modern and historical Cyrillic.
+ "Extended Russian input method for typing modern 
+  and historical Cyrillic.
  DEAD 1! 2\" 3№ 4; 5% 6: 7? 8* 9( 0) -_ =+ 
-     Й  Ц  У  К  Е  Н  Г  Ш  Щ  З  Х  Ъ  \\/
-      Ф  Ы  В  А  П  Р  О  Л  Д  Ж  Э
-       Я  Ч  С  М  И  Т  Ь  Б  Ю  .,
+   Й  Ц  У  К  Е  Н  Г  Ш  Щ  З  Х  Ъ \\/
+    Ф  Ы  В  А  П  Р  О  Л  Д  Ж  Э
+      Я  Ч  С  М  И  Т  Ь  Б  Ю  .,
  Dead key converts letter to superscript (without pokrytie).
-Historical letters and commonly used superscripts (with pokrytie) on
-Alt and AltShift:
- Ё  ҂[zwj] ◌҃꙾   ◌̀◌҆̀ ◌҇꙾  ◌҆◌̑  ◌̏◌᷀  ◌́◌҆́ ѿѾ ѡѠ ᲂ ⷪ҇ ꙍꙌ ꙳✠ 
-   їЇ  ꙁꙀ ꙋꙊ  ѯѮ  єЄ  ⷩ҇🕀   ⷢ҇🕁  ⷲ҇🕂   ⷳ҇🕃  ѕЅ  ⷯ🕄  ̾ⸯ  ѽѼ
-      ѳѲ ѵѴ   ⷡ҇ᲀ  ꙗꙖ  ѱѰ   ⷬ҇  ѻѺ  ⷧ҇  ⷣᲁ  ⷤ  ѣѢ
-              ѧѦ џЏ  ⷭ҇ᲃ  ⷨ🕅 іІ ᲅᲄ   ꙽ꙿ   ⷠ҇  ѫѪ  Ꙟꙟ 
+ Historical letters and commonly used superscripts 
+ (with pokrytie) on Alt and AltShift:
+   ҂[zwj] ◌҃꙾ ◌̀◌҆̀ ◌҇◌꙼ ◌҆◌̑  ◌̏◌᷀  ◌́◌҆́ ѿѾ ѡѠ ᲂ◌ⷪ҇  ꙍꙌ ꙳✠ 
+   їЇ ꙁꙀ ꙋꙊ  ѯѮ  єЄ ◌ⷩ҇🕀 ◌ⷢ҇🕁 ◌ⷲ҇🕂 ◌ⷳ҇🕃 ѕЅ ◌ⷯ🕄 ◌̾ⸯ  ѽѼ
+     ѳѲ ѵѴ ◌ⷡ҇ᲀ ꙗꙖ ѱѰ ◌ⷬ҇ ѻѺ ◌ⷧ҇ ◌ⷣᲁ ◌ⷤ ѣѢ
+            ѧѦ џЏ ◌ⷭ҇ᲃ ◌ⷨ🕅 іІ ᲅᲄ ◌꙽ꙿ ◌ⷠ҇ ѫѪ ꙟꙞ 
 ")
 
 (title "RU")
@@ -136,7 +137,7 @@ Alt and AltShift:
   (">" ?Ю)
   ("?" ?,)
 ;; AltGr and AltGr+Shift levels
-   ((A-`) ?ё) ((A-~) ?Ё)
+   ((A-`) 0x0451) ((A-~) 0x0401) 
    ((A-1) 0x0482) ((A-!) 0x200D)
    ((A-2) 0x0483) ((A-@) 0xA67E)
    ((A-3) 0x0300) ((A-#) 0x0486 0x0300)
@@ -164,18 +165,18 @@ Alt and AltShift:
    ((A-\\) 0x047D) ((A-|) 0x047C)
    ((A-a) 0x0473) ((A-A) 0x0472)
     ((A-s) 0x0475) ((A-S) 0x0474)
-   ((A-d) 0x2DE1) ((A-D) 0x1C80)
+   ((A-d) 0x2DE1 0x0487) ((A-D) 0x1C80)
    ((A-f) 0xA657) ((A-F) 0xA656)
    ((A-g) 0x0471) ((A-G) 0x0470)
-   ((A-h) 0x2DEC)
+   ((A-h) 0x2DEC 0x0487)
    ((A-j) 0x047B) ((A-J) 0x047A)
-   ((A-k) 0x2DE7)
+   ((A-k) 0x2DE7 0x0487)
    ((A-l) 0x2DE3) ((A-L) 0x1C81)
    ((A-\;) 0x2DE4)
    ((A-') 0x0463) ((A-\") 0x0462) ;;"
    ((A-z) 0x0467) ((A-Z) 0x0466)
-    ((A-x) 0x045F) ((A-X) 0x040F)
-   ((A-c) 0x2DED) ((A-C) 0x1C83)
+   ((A-x) 0x045F) ((A-X) 0x040F)
+   ((A-c) 0x2DED 0x0487) ((A-C) 0x1C83)
    ((A-v) 0x2DE8) ((A-V) 0x1F545)
    ((A-b) 0x0456) ((A-B) 0x0406)
    ((A-n) 0x1C85) ((A-N) 0x1C84)
@@ -224,7 +225,7 @@ Alt and AltShift:
    ("`]" 0xA678) ("`}" 0xA678)
    ("`s" 0xA679) ("`S" 0xA679)
    ("`m" 0xA67A) ("`M" 0xA67A)
-   ("`'" 0x2DFA) ("`\"" 0x2DFA)
+   ((` A-') 0x2DFA) ((` A-\") 0x2DFA) ;"
    ("`." 0x2DFB) ("`>" 0x2DFB)
    ((` A-z) 0x2DFD) ((` A-Z) 0x2DFD)
    ((` A-f) 0x2DFC) ((` A-F) 0x2DFC)

@@ -9,6 +9,8 @@ install:
 
 uninstall:
 	rm -f $(ICONDEST)/cu-kbd.png
+	rm -f $(ICONDEST)/ru-ext.png
 	rm -f $(DEST)/cu-kbd.mim
+	rm -f $(DEST)/ru-ext.mim
 	rm -f $(DEST)/cu.lnm
 
