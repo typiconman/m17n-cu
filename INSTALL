@@ -65,8 +65,13 @@ $ ibus-setup
 On the Input Method tab, check Customize active input methods.
 Click on Select input method.
 Click on Show all input methods.
-Scroll down and select Church Slavic; Old Slavonic; Old Church Slavonic
-Select the kbd variant (the only variant currently available)
+Scroll down and select: 
+* For Church Slavic input method:
+   Church Slavic; Old Slavonic; Old Church Slavonic
+   Select the kbd (m17n) variant (the only variant currently available)
+* For Russian Extended input method:
+   Russian
+   Select the ext (m17n) variant
 Click Add
 Click Close
 
@@ -121,7 +126,7 @@ Run
 $ ibus-setup
 
 Go to the Input Method tab
-Click on Church Slavic; Old Slavonic; Old Church Slavonic;
+Click on Church Slavic; Old Slavonic; Old Church Slavonic - kbd (m17n); (or Russian - ext (m17n))
 Click Remove
 Click Close
 
