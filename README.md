@@ -31,7 +31,8 @@ along with Ponomar.  If not, see <http://www.gnu.org/licenses/>.
 
 ===
 For Installation instructions, see the INSTALL file.
-For detailed Documentation, see docen.pdf
+For detailed Documentation, see docen.pdf available at
+http://www.ponomar.net/files/docen.pdf
 For Russian installation instructions, see the RUSSIAN file.
 Документация на русском языке находится в файле RUSSIAN.
 
