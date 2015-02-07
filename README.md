@@ -7,6 +7,7 @@ This repository contains data for Church Slavic multilingualization for GNU-Linu
 
 The following is supported:
 * Language data for Church Slavic
+* Church Slavic localization for GNU/Linux
 * Conversion of legacy encodings to Unicode
 * Church Slavic input methods for IBUS / m17n
 

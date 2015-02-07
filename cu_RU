@@ -1,0 +1,585 @@
+comment_char %
+escape_char  /
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Church Slavic language locale for Russia 
+%
+% Charset: UTF-8
+%
+% Prepared and contributed to glibc by Aleksandr Andreev <aleksandr.andreev@gmail.com>
+%
+% This locale data has been developed by the Slavonic Computing Initiative:
+%      http://www.ponomar.net/cu_support.html
+%
+% build with: localedef -f UTF-8 -i cu_RU cu_RU
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Church Slavic Language Locale for Russia
+% Source: Slavonic Computing Initiative (SCI)
+% Contact: Aleksandr Andreev
+% Email: aleksandr.andreev@gmail.com
+% Language: cu
+% Territory: RU
+% Revision: 0.1
+% Date: 2015-02-01
+% Application: general
+% Users: general
+% Charset: UTF-8
+% Distribution and use is free, also
+% for commercial purposes.
+
+LC_IDENTIFICATION
+title      "Church Slavic locale for Russia"
+source     "Slavonic Computing Initiative"
+address    "http://www.ponomar.net/cu_support.html"
+contact    "Aleksandr Andreev"
+email      "aleksandr.andreev@gmail.com"
+tel        ""
+fax        ""
+language   "Church Slavic"
+territory  "Russia"
+revision   "0.1"
+date       "2015-02-01"
+%
+
+category  "i18n:2000";LC_IDENTIFICATION
+category  "i18n:2000";LC_COLLATE
+category  "i18n:2000";LC_CTYPE
+category  "i18n:2000";LC_MEASUREMENT
+category  "i18n:2000";LC_MONETARY
+category  "posix:1993";LC_NUMERIC
+category  "i18n:2000";LC_PAPER
+category  "i18n:2000";LC_TELEPHONE
+category  "i18n:2000";LC_ADDRESS
+category  "i18n:2000";LC_MESSAGES
+category  "i18n:2000";LC_NAME
+category  "i18n:2000";LC_TIME
+
+END LC_IDENTIFICATION
+
+LC_CTYPE
+copy "i18n"
+
+translit_start
+include  "translit_combining";""
+translit_end
+END LC_CTYPE
+
+LC_COLLATE
+% basic symbols for Cyrillic
+collating-symbol <CYR-A>
+collating-symbol <CYR-BE>
+collating-symbol <CYR-VE>
+collating-symbol <CYR-GHE>
+collating-symbol <CYR-DE>
+collating-symbol <CYR-GZHE>
+collating-symbol <CYR-DJE>
+collating-symbol <CYR-IE>
+collating-symbol <UKR-IE>
+collating-symbol <CYR-IO>
+collating-symbol <CYR-ZHE>
+collating-symbol <CYR-DZE>
+collating-symbol <CYR-ZE>
+collating-symbol <CYR-I>
+collating-symbol <UKR-I>
+collating-symbol <UKR-YI>
+collating-symbol <CYR-IBRE>
+collating-symbol <CYR-JE>
+collating-symbol <CYR-KA>
+collating-symbol <CYR-EL>
+collating-symbol <CYR-LJE>
+collating-symbol <CYR-EM>
+collating-symbol <CYR-EN>
+collating-symbol <CYR-NJE>
+collating-symbol <CYR-O>
+collating-symbol <CYR-PE>
+collating-symbol <CYR-ER>
+collating-symbol <CYR-ES>
+collating-symbol <CYR-TE>
+collating-symbol <CYR-TSHE>
+collating-symbol <CYR-OU>
+collating-symbol <CYR-EF>
+collating-symbol <CYR-HA>
+collating-symbol <CYR-TSE>
+collating-symbol <CYR-CHE>
+collating-symbol <CYR-DCHE>
+collating-symbol <CYR-SHA>
+collating-symbol <CYR-SHTSHA>
+collating-symbol <CYR-SIGDUR>
+collating-symbol <CYR-YEROU>
+collating-symbol <CYR-SIGMOUIL>
+collating-symbol <CYR-E>
+collating-symbol <CYR-YOU>
+collating-symbol <CYR-YA>
+
+% cases
+collating-symbol <MIN>
+collating-symbol <CAP>
+collating-symbol <SUPER> % Symbolic weight for superscript letter
+
+% variants
+collating-symbol <BAS>
+collating-symbol <S047B>
+collating-symbol <PCL>
+collating-symbol <PCL2> % Symbolic weight for second peculiar variant
+collating-symbol <PCL3> % Symbolic weight for third peculiar variant
+collating-symbol <LIG>
+
+% more letters
+collating-symbol <S0479>
+collating-symbol <S0463>
+collating-symbol <SA657>
+collating-symbol <S046B>
+collating-symbol <S046F>
+collating-symbol <S0471>
+collating-symbol <S0473>
+collating-symbol <S0475>
+
+% Diacritical marks
+collating-symbol <PSILI>
+collating-symbol <TITL> % Cyrillic Titlo
+collating-symbol <ACA> % 18 accent aigu/acute accent
+collating-symbol <GRA> % 20 accent grave/grave accent
+collating-symbol <BRE> % 21 brève/breve
+collating-symbol <REU> % 25 tréma/diaeresis (ou/or umlaut)
+collating-symbol <DAC> % 26 double ac. aigu/double acute ac.
+collating-symbol <MAC> % 32 macron/macron
+collating-symbol <DGR> % double grave
+collating-symbol <IBR> % inverted breve
+
+% additional Church Slavic letters Not implemented in GNU C Library
+collating-element <NarrowO> from "/xe1/xb1/xc2"
+collating-element <LongDe> from "/xe1/xb1/xc1"
+collating-element <WideEs> from "/xe1/xb1/xc3"
+collating-element <UKR-IECMB> from "/xea/x99/xb4"
+collating-element <CYR-ICMB> from "/xea/x99/xb5"
+collating-element <UKR-ICMB>  from "/xea/x99/xb6"
+collating-element <CYR-OUCMB>  from "/xea/x99/xb7"
+collating-element <SIGDUR-CMB>  from "/xea/x99/xb8"
+collating-element <CYRYERU-CMB>  from "/xea/x99/xb9"
+collating-element <SIGMOIL-CMB>  from "/xea/x99/xba"
+collating-element <CYR-OMEGACMB>  from "/xea/x99/xbb"
+collating-element <CYR-EFCMB>  from "/xea/x9a/x9e"
+
+% Contractions
+collating-element <o+u> from "<U043E><U0443>"
+collating-element <NarrowO+u> from "/xe1/xb1/xc2<U0443>"
+collating-element <O+u> from "<U041E><U0443>"
+collating-element <O+U> from "<U041E><U0423>"
+
+% Church Slavic Combining Symbols that need to be reordered
+collating-element <be-tse-de> from "<U0431><U0446><U2DE3>"
+collating-element <BE-tse-de> from "<U0411><U0446><U2DE3>"
+collating-element <be-che-de> from "<U0431><U0447><U2DE3>"
+collating-element <BE-che-de> from "<U0411><U0447><U2DE3>"
+collating-element <me-er-de> from "<U043C><U0440><U2DE3>"
+collating-element <ME-er-de> from "<U041C><U0440><U2DE3>"
+collating-element <en-el-de> from "<U043D><U043B><U2DE3>"
+collating-element <EN-el-de> from "<U041D><U043B><U2DE3>"
+collating-element <er-te-de> from "<U0440><U0442><U2DE3>"
+collating-element <ER-te-de> from "<U0420><U0442><U2DE3>"
+collating-element <ge-de-es> from "<U0433><U0434><U2DED>"
+collating-element <GE-de-es> from "<U0413><U0434><U2DED>"
+collating-element <ge-pe-es> from "<U0433><U043F><U2DED>"
+collating-element <GE-pe-es> from "<U0413><U043F><U2DED>"
+collating-element <em-tse-es> from "<U043C><U0446><U2DED>"
+collating-element <EM-tse-es> from "<U041C><U0446><U2DED>"
+collating-element <em-che-es> from "<U043C><U0447><U2DED>"
+collating-element <EM-che-es> from "<U041C><U0447><U2DED>"
+collating-element <che-te-es> from "<U0447><U0442><U2DED>"
+collating-element <CHE-te-es> from "<U0427><U0442><U2DED>"
+
+% internal order of symbols
+<CAP>
+<MIN>
+<SUPER>
+
+<BAS>
+<PSILI>
+<ACA>
+<GRA>
+<IBR>
+<TITL>
+<BRE>
+<REU>
+
+% CHARACTER VARIANTS AND LIGATURES SORT AFTER LETTERS
+<PCL>
+<PCL2>
+<PCL3>
+<LIG>
+
+
+% Cyrillic letters
+<CYR-A>
+<CYR-BE>
+<CYR-VE>
+<CYR-GHE>
+<CYR-DE>
+<CYR-IE>
+<CYR-ZHE>
+<CYR-DZE>
+<CYR-ZE>
+<CYR-I>
+<UKR-I>
+<CYR-KA>
+<CYR-EL>
+<CYR-EM>
+<CYR-EN>
+<S047B>
+<CYR-PE>
+<CYR-ER>
+<CYR-ES>
+<CYR-TE>
+<S0479>
+<CYR-EF>
+<CYR-HA>
+<CYR-TSE>
+<CYR-CHE>
+<CYR-SHA>
+<CYR-SHTSHA>
+<CYR-SIGDUR>
+<CYR-YEROU>
+<CYR-SIGMOUIL>
+<CYR-E>
+<S0463>
+<CYR-YOU>
+<CYR-YA>
+<SA657>
+<S046B>
+<S046F>
+<S0471>
+<S0473>
+<S0475>
+
+% sort order for Church Slavic
+order_start forward;backward;forward;forward,position
+<U0487> IGNORE;IGNORE;IGNORE;<U0487>
+<UA67C> IGNORE;IGNORE;IGNORE;<UA67C>
+<UA67E> IGNORE;IGNORE;IGNORE;<UA67E>
+<U0486> IGNORE;<PSILI>;IGNORE;IGNORE
+<U0301> IGNORE;<ACA>;IGNORE;IGNORE
+<U0300> IGNORE;<GRA>;IGNORE;IGNORE
+<U0311> IGNORE;<IBR>;IGNORE;IGNORE
+<U0483> IGNORE;<TITL>;IGNORE;IGNORE
+<U0306> IGNORE;<BRE>;IGNORE;IGNORE
+<U0308> IGNORE;<REU>;IGNORE;<U0308>
+<U030F> IGNORE;<REU>;IGNORE;<U030F>
+<U0430> <CYR-A>;<BAS>;<MIN>;IGNORE
+<U04D1> <CYR-A>;<BRE>;<MIN>;IGNORE
+<U04D3> <CYR-A>;<REU>;<MIN>;IGNORE
+<U0410> <CYR-A>;<BAS>;<CAP>;IGNORE
+<U04D0> <CYR-A>;<BRE>;<CAP>;IGNORE
+<U04D2> <CYR-A>;<REU>;<CAP>;IGNORE
+<U0431> <CYR-BE>;<BAS>;<MIN>;IGNORE
+<U0411> <CYR-BE>;<BAS>;<CAP>;IGNORE
+<U0432> <CYR-VE>;<BAS>;<MIN>;IGNORE
+<U0412> <CYR-VE>;<BAS>;<CAP>;IGNORE
+<U0433> <CYR-GHE>;<BAS>;<MIN>;IGNORE
+<U0413> <CYR-GHE>;<BAS>;<CAP>;IGNORE
+<U0434> <CYR-DE>;<BAS>;<MIN>;<U0434>
+<LongDe> <CYR-DE>;<BAS>;<MIN>;<LongDe>
+<U2DE3> <CYR-DE>;<BAS>;<SUPER>;IGNORE
+<U0414> <CYR-DE>;<BAS>;<CAP>;IGNORE
+<U0435> <CYR-IE>;<BAS>;<MIN>;IGNORE
+<U0450> <CYR-IE>;<GRA>;<MIN>;IGNORE
+<U04D7> <CYR-IE>;<BRE>;<MIN>;IGNORE
+<U0415> <CYR-IE>;<BAS>;<CAP>;IGNORE
+<U0400> <CYR-IE>;<GRA>;<CAP>;IGNORE
+<U04D6> <CYR-IE>;<BRE>;<CAP>;IGNORE
+<U0454> <CYR-IE>;<PCL>;<MIN>;IGNORE
+<U0404> <CYR-IE>;<PCL>;<CAP>;IGNORE
+<U2DF7>  <CYR-IE>;<BAS>;<SUPER>;IGNORE
+<UKR-IECMB> <CYR-IE>;<PCL>;<SUPER>;IGNORE
+<U0451> <CYR-IE>;<REU>;<MIN>;IGNORE
+<U0401> <CYR-IE>;<REU>;<CAP>;IGNORE
+<U0436> <CYR-ZHE>;<BAS>;<MIN>;IGNORE
+<U2DE4> <CYR-ZHE>;<BAS>;<SUPER>;IGNORE
+<U0416> <CYR-ZHE>;<BAS>;<CAP>;IGNORE
+<U0455> <CYR-DZE>;<BAS>;<MIN>;IGNORE
+<U0405> <CYR-DZE>;<BAS>;<CAP>;IGNORE
+<U0437> <CYR-ZE>;<BAS>;<MIN>;<U0437>
+<U0417> <CYR-ZE>;<BAS>;<CAP>;IGNORE
+<UA641> <CYR-ZE>;<BAS>;<MIN>;<UA641>
+<UA640> <CYR-ZE>;<BAS>;<CAP>;<UA640>
+<U2DE5> <CYR-ZE>;<BAS>;<SUPER>;IGNORE
+<U0438> <CYR-I>;<BAS>;<MIN>;IGNORE
+<U045D> <CYR-I>;<GRA>;<MIN>;IGNORE
+<U04E5> <CYR-I>;<REU>;<MIN>;IGNORE
+<U0418> <CYR-I>;<BAS>;<CAP>;IGNORE
+<U040D> <CYR-I>;<GRA>;<CAP>;IGNORE
+<U04E4> <CYR-I>;<REU>;<CAP>;IGNORE
+<U0439> <CYR-I>;<BRE>;<MIN>;IGNORE
+<U0419> <CYR-I>;<BRE>;<CAP>;IGNORE
+<CYR-ICMB> <CYR-I>;<BAS>;<SUPER>;IGNORE
+<U0456> <UKR-I>;<BAS>;<MIN>;IGNORE
+<U0406> <UKR-I>;<BAS>;<CAP>;IGNORE
+<U0457> <UKR-I>;<REU>;<MIN>;IGNORE
+<U0407> <UKR-I>;<REU>;<CAP>;IGNORE
+<U043A> <CYR-KA>;<BAS>;<MIN>;IGNORE
+<U041A> <CYR-KA>;<BAS>;<CAP>;IGNORE
+<U043B> <CYR-EL>;<BAS>;<MIN>;IGNORE
+<U041B> <CYR-EL>;<BAS>;<CAP>;IGNORE
+<U043C> <CYR-EM>;<BAS>;<MIN>;IGNORE
+<U041C> <CYR-EM>;<BAS>;<CAP>;IGNORE
+<U043D> <CYR-EN>;<BAS>;<MIN>;IGNORE
+<U047B> <S047B>;<BAS>;<MIN>;IGNORE
+<U047A> <S047B>;<BAS>;<CAP>;IGNORE
+<U043E> <S047B>;<PCL>;<MIN>;IGNORE
+<U041E> <S047B>;<PCL>;<CAP>;IGNORE
+<NarrowO> <S047B>;<PCL>;<MIN>;<NarrowO>
+<U2DEA> <S047B>;<PCL>;<SUPER>;IGNORE
+<U0461> <S047B>;<PCL2>;<MIN>;IGNORE
+<U0460> <S047B>;<PCL2>;<CAP>;IGNORE
+<CYR-OMEGACMB> <S047B>;<PCL2>;<SUPER>;IGNORE
+<UA64D> <S047B>;<PCL3>;<MIN>;IGNORE
+<UA64C> <S047B>;<PCL3>;<CAP>;IGNORE
+<U047D> <S047B>;"<PCL3><PSILI><IBR>";<MIN>;IGNORE
+<U047C> <S047B>;"<PCL3><PSILI><IBR>";<CAP>;IGNORE
+<U047F> "<S047B><CYR-TE>";<PCL2>;<MIN>;IGNORE
+<U047E> "<S047B><CYR-TE>";<PCL2>;<CAP>;IGNORE
+<U043F> <CYR-PE>;<BAS>;<MIN>;IGNORE
+<U041F> <CYR-PE>;<BAS>;<CAP>;IGNORE
+<U0440> <CYR-ER>;<BAS>;<MIN>;IGNORE
+<U0420> <CYR-ER>;<BAS>;<CAP>;IGNORE
+<U0441> <CYR-ES>;<BAS>;<MIN>;<U0441>
+<WideEs> <CYR-ES>;<BAS>;<MIN>;<WideEs>
+<U0421> <CYR-ES>;<BAS>;<CAP>;IGNORE
+<U0442> <CYR-TE>;<BAS>;<MIN>;IGNORE
+<U0422> <CYR-TE>;<BAS>;<CAP>;IGNORE
+<U0479> <S0479>;<BAS>;<MIN>;<U0479>
+<U0478> <S0479>;<BAS>;<CAP>;<U0478>
+<o+u> <S0479>;<BAS>;<MIN>;<U043E>
+<NarrowO+u> <S0479>;<BAS>;<MIN>;IGNORE
+<O+u> <S0479>;<BAS>;<CAP>;<U0443>
+<O+U> <S0479>;<BAS>;<CAP>;<U0423>
+<UA64B> <S0479>;<PCL>;<MIN>;IGNORE
+<UA64A> <S0479>;<PCL>;<CAP>;IGNORE
+<U2DF9> <S0479>;<PCL>;<SUPER>;IGNORE
+<U0443> <S0479>;<PCL2>;<MIN>;IGNORE
+<U0423> <S0479>;<PCL2>;<CAP>;IGNORE
+<CYR-OUCMB> <S0479>;<PCL2>;<SUPER>;IGNORE
+<U0444> <CYR-EF>;<BAS>;<MIN>;IGNORE
+<U0424> <CYR-EF>;<BAS>;<CAP>;IGNORE
+<U0445> <CYR-HA>;<BAS>;<MIN>;IGNORE
+<U0425> <CYR-HA>;<BAS>;<CAP>;IGNORE
+<U0446> <CYR-TSE>;<BAS>;<MIN>;IGNORE
+<U0426> <CYR-TSE>;<BAS>;<CAP>;IGNORE
+<U0447> <CYR-CHE>;<BAS>;<MIN>;IGNORE
+<U0427> <CYR-CHE>;<BAS>;<CAP>;IGNORE
+<U0448> <CYR-SHA>;<BAS>;<MIN>;IGNORE
+<U0428> <CYR-SHA>;<BAS>;<CAP>;IGNORE
+<U0449> <CYR-SHTSHA>;<BAS>;<MIN>;IGNORE
+<U0429> <CYR-SHTSHA>;<BAS>;<CAP>;IGNORE
+<U044A> <CYR-SIGDUR>;<BAS>;<MIN>;IGNORE
+<U042A> <CYR-SIGDUR>;<BAS>;<CAP>;IGNORE
+<U044B> <CYR-YEROU>;<BAS>;<MIN>;IGNORE
+<U042B> <CYR-YEROU>;<BAS>;<CAP>;IGNORE
+<U044C> <CYR-SIGMOUIL>;<BAS>;<MIN>;IGNORE
+<U042C> <CYR-SIGMOUIL>;<BAS>;<CAP>;IGNORE
+<U044D> <CYR-E>;<BAS>;<MIN>;IGNORE
+<U04ED> <CYR-E>;<REU>;<MIN>;IGNORE
+<U042D> <CYR-E>;<BAS>;<CAP>;IGNORE
+<U04EC> <CYR-E>;<REU>;<CAP>;IGNORE
+<U0463> <S0463>;<BAS>;<MIN>;IGNORE
+<U0462> <S0463>;<BAS>;<CAP>;IGNORE
+<U2DFA> <S0463>;<BAS>;<SUPER>;IGNORE
+<U044E> <CYR-YOU>;<BAS>;<MIN>;IGNORE
+<U042E> <CYR-YOU>;<BAS>;<CAP>;IGNORE
+<U044F> <CYR-YA>;<BAS>;<MIN>;IGNORE
+<U042F> <CYR-YA>;<BAS>;<CAP>;IGNORE
+<UA657> <SA657>;<BAS>;<MIN>;IGNORE
+<UA656> <SA657>;<BAS>;<CAP>;IGNORE
+<U2DFC> <SA657>;<BAS>;<SUPER>;IGNORE
+<U0467> <SA657>;<PCL>;<MIN>;IGNORE
+<U0466> <SA657>;<PCL>;<CAP>;IGNORE
+<U2DFD> <SA657>;<PCL>;<SUPER>;IGNORE
+<U046B> <S046B>;<BAS>;<MIN>;IGNORE
+<U046A> <S046B>;<BAS>;<CAP>;IGNORE
+<U2DFE> <S046B>;<BAS>;<SUPER>;IGNORE
+<U046F> <S046F>;<BAS>;<MIN>;IGNORE
+<U046E> <S046F>;<BAS>;<CAP>;IGNORE
+<U0471> <S0471>;<BAS>;<MIN>;IGNORE
+<U0470> <S0471>;<BAS>;<CAP>;IGNORE
+<U0473> <S0473>;<BAS>;<MIN>;IGNORE
+<U0472> <S0473>;<BAS>;<CAP>;IGNORE
+<U2DF4> <S0473>;<BAS>;<SUPER>;IGNORE
+<U0475> <S0475>;<BAS>;<MIN>;IGNORE
+<U0474> <S0475>;<BAS>;<CAP>;IGNORE
+<U0477> <S0475>;"<BAS><REU>";<MIN>;IGNORE
+<U0476> <S0475>;"<BAS><REU>";<CAP>;IGNORE
+
+% CYRILLIC COMBINING LETTERS
+<U2DF6><CYR-A>;<BAS>;<SUPER>;IGNORE
+<U2DE0> <CYR-BE>;<BAS>;<SUPER>;IGNORE
+<U2DE1> <CYR-VE>;<BAS>;<SUPER>;IGNORE
+<U2DE2> <CYR-GHE>;<BAS>;<SUPER>;IGNORE
+<UKR-ICMB> <UKR-I>;<BAS>;<SUPER>;<UKR-ICMB>
+<U2DE6> <CYR-KA>;<BAS>;<SUPER>;IGNORE
+<U2DE7> <CYR-EL>;<BAS>;<SUPER>;IGNORE
+<U2DE8> <CYR-EM>;<BAS>;<SUPER>;IGNORE
+<U2DE9> <CYR-EN>;<BAS>;<SUPER>;IGNORE
+<U2DEB> <CYR-PE>;<BAS>;<SUPER>;IGNORE
+<U2DEC> <CYR-ER>;<BAS>;<SUPER>;IGNORE
+<U2DED> <CYR-ES>;<BAS>;<SUPER>;IGNORE
+<U2DF5> "<CYR-ES><CYR-TE>";<BAS>;<SUPER>;IGNORE
+<U2DEE> <CYR-TE>;<BAS>;<SUPER>;IGNORE
+<CYR-EFCMB> <CYR-EF>;<BAS>;<SUPER>;IGNORE
+<U2DEF> <CYR-HA>;<BAS>;<SUPER>;IGNORE
+<U2DF0> <CYR-TSE>;<BAS>;<SUPER>;IGNORE
+<U2DF1> <CYR-CHE>;<BAS>;<SUPER>;IGNORE
+<U2DF2> <CYR-SHA>;<BAS>;<SUPER>;IGNORE
+<U2DF3> <CYR-SHTSHA>;<BAS>;<SUPER>;IGNORE
+<U033E> <CYR-SIGDUR>;<BAS>;<SUPER>;<U033E>
+<SIGDUR-CMB> <CYR-SIGDUR>;<BAS>;<SUPER>;<SIGDUR-CMB>
+<U2E2F> <CYR-SIGDUR>;<BAS>;<SUPER>;<U2E2F>
+<CYRYERU-CMB> <CYR-YEROU>;<BAS>;<SUPER>;IGNORE
+<UA67F> <CYR-SIGMOUIL>;<BAS>;<SUPER>;<UA67F>
+<UA67D> <CYR-SIGMOUIL>;<BAS>;<SUPER>;<UA67D>
+<SIGMOIL-CMB> <CYR-SIGMOUIL>;<BAS>;<SUPER>;<SIGMOIL-CMB>
+<U2DFB> <CYR-YOU>;<BAS>;<SUPER>;IGNORE
+
+% reordering contractions
+<be-tse-de> "<CYR-BE><CYR-DE><CYR-TSE>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<BE-tse-de> "<CYR-BE><CYR-DE><CYR-TSE>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<be-che-de> "<CYR-BE><CYR-DE><CYR-CHE>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<BE-che-de> "<CYR-BE><CYR-DE><CYR-CHE>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<me-er-de> "<CYR-EM><CYR-DE><CYR-ER>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<ME-er-de> "<CYR-EM><CYR-DE><CYR-ER>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<en-el-de> "<CYR-EN><CYR-DE><CYR-EL>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<EN-el-de> "<CYR-EN><CYR-DE><CYR-EL>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<er-te-de> "<CYR-ER><CYR-DE><CYR-TE>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<ER-te-de> "<CYR-ER><CYR-DE><CYR-TE>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<ge-de-es> "<CYR-GHE><CYR-ES><CYR-DE>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<GE-de-es> "<CYR-GHE><CYR-ES><CYR-DE>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<ge-pe-es> "<CYR-GHE><CYR-ES><CYR-PE>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<GE-pe-es> "<CYR-GHE><CYR-ES><CYR-PE>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<em-tse-es> "<CYR-EM><CYR-ES><CYR-TSE>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<EM-tse-es> "<CYR-EM><CYR-ES><CYR-TSE>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<em-che-es> "<CYR-EM><CYR-ES><CYR-CHE>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<EM-che-es> "<CYR-EM><CYR-ES><CYR-CHE>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+<che-te-es> "<CYR-CHE><CYR-ES><CYR-TE>";"<BAS><BAS><BAS>";"<MIN><SUPER><MIN>";IGNORE
+<CHE-te-es> "<CYR-CHE><CYR-ES><CYR-TE>";"<BAS><BAS><BAS>";"<CAP><SUPER><MIN>";IGNORE
+UNDEFINED IGNORE;IGNORE;IGNORE;%...
+order_end
+
+END LC_COLLATE
+
+LC_MESSAGES 
+yesexpr "<U005E><U005B><U0404><U0454><U0059><U0079><U005D><U002E><U002A>"
+noexpr  "<U005E><U005B><U041D><U043D><U004E><U006E><U005D><U002E><U002A>"
+END LC_MESSAGES
+
+LC_MONETARY
+int_curr_symbol           "<U0052><U0055><U0042><U0020>"
+currency_symbol           "<U0440><UA64B><U0301><U0431>"
+mon_decimal_point         "<U002E>"
+mon_thousands_sep         "<U00A0>"
+mon_grouping              3;3
+positive_sign             ""
+negative_sign             "<U002D>"
+int_frac_digits           2
+frac_digits               2
+p_cs_precedes             0
+p_sep_by_space            1
+n_cs_precedes             0
+n_sep_by_space            1
+p_sign_posn               1
+n_sign_posn               1
+END LC_MONETARY
+
+LC_NUMERIC
+decimal_point             "<U002C>"
+thousands_sep             "<U00A0>"
+grouping                  3;3
+END LC_NUMERIC
+
+LC_TIME
+day     "<U043D><U0435><U0434><U0463><U0301><U043B><U0467>";/
+       "<U043F><U043E><U043D><U0435><U0434><U0463><U0301><U043B><U044C><U043D><U0438><U043A><U044A>";/
+        "<U0432><U0442><U043E><U0301><U0440><U043D><U0438><U043A><U044A>";/
+        "<U0441><U0440><U0435><U0434><U0430><U0300>";/
+        "<U0447><U0435><U0442><U0432><U0435><U0440><U0442><U043E><U0301><U043A><U044A>";/
+        "<U043F><U0467><U0442><U043E><U0301><U043A><U044A>";/
+        "<U0441><UA64B><U0431><U0431><U0461><U0301><U0442><U0430>"
+abday   "<U043D><U0434>.";/
+        "<U043F><U043D>.";/
+        "<U0432><U0442>.";/
+        "<U0441><U0440>.";/
+        "<U0447><U0442>.";/
+        "<U043F><U0442>.";/
+        "<U0441><U0431>."
+mon     "<U0456><U0486><U0430><U043D><U043D><UA64B><U0430><U0301><U0440><U0456><U0308><U0439>";/
+        "<U0444><U0435><U0432><U0440><UA64B><U0430><U0301><U0440><U0456><U0308><U0439>";/
+        "<U043C><U0430><U0301><U0440><U0442><U044A>";/
+        "<U0430><U0486><U043F><U0440><U0456><U0301><U043B><U0456><U0308><U0438><U0306>";/
+        "<U043C><U0430><U0301><U0456><U0308><U0438><U0306>";/
+        "<U0456><U0486><UA64B><U0301><U043D><U0456><U0308><U0438><U0306>";/
+        "<U0456><U0486><UA64B><U0301><U043B><U0456><U0308><U0438><U0306>";/
+        "<U0430><U0486><U0301><U0475><U0433><UA64B><U0441><U0442><U044A>";/
+        "<U0441><U0435><U043F><U0442><U0435><U0301><U043C><U0432><U0440><U0456><U0308><U0438><U0306>";/
+        "<U047B><U0486><U043A><U0442><U0461><U0301><U0432><U0440><U0456><U0308><U0438><U0306>";/
+        "<U043D><U043E><U0435><U0301><U043C><U0432><U0440><U0456><U0308><U0438><U0306>";/
+        "<U0434><U0435><U043A><U0435><U0301><U043C><U0432><U0440><U0456><U0308><U0438><U0306>"
+abmon   "<U0456><U0486><U0430><U043D>.";/
+        "<U0444><U0435><U0432><U0440>.";/
+        "<U043C><U0430><U0301><U0440><U0442><U044A>";/
+        "<U0430><U0486><U043F><U0440>.";/
+        "<U043C><U0430><U0301><U0456><U0308><U0439>";/
+        "<U0456><U0486><UA64B><U0301><U043D><U0456><U0308><U0438><U0306>";/
+        "<U0456><U0486><UA64B><U0301><U043B><U0456><U0308><U0438><U0306>";/
+        "<U0430><U0486><U0301><U0475><U0433>.";/
+        "<U0441><U0435><U043F><U0442>.";/
+        "<U047B><U0486><U043A><U0442>.";/
+        "<U043D><U043E><U0435><U0301><U043C>.";/
+        "<U0434><U0435><U043A>."
+d_t_fmt "<U0025><U0061><U0020><U0025><U0064><U0020><U0025><U0062>/
+<U0020><U0025><U0059><U0020><U0025><U0054>"
+d_fmt     "<U0025><U0064><U002E><U0025><U006D><U002E><U0025><U0059>"
+t_fmt     "<U0025><U0054>"
+am_pm     "";""
+t_fmt_ampm ""
+date_fmt       "<U0025><U0061><U0020><U0025><U0062><U0020><U0025><U0065>/
+<U0020><U0025><U0048><U003A><U0025><U004D><U003A><U0025><U0053><U0020>/
+<U0025><U005A><U0020><U0025><U0059>"
+first_weekday 1
+first_workday 2
+END LC_TIME
+
+LC_PAPER
+% FIXME
+height   297
+% FIXME
+width    210
+END LC_PAPER
+
+LC_TELEPHONE
+tel_int_fmt    "<U002B><U0025><U0063><U0020><U0025><U0061><U0020><U0025>/
+<U006C>"
+int_prefix     "<U0037>"
+int_select     "<U0030><U007E><U0031><U0030>"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+% FIXME
+measurement    1
+END LC_MEASUREMENT
+
+LC_NAME
+name_fmt    "<U0025><U0064><U0025><U0074><U0025><U0067><U0025><U0074>/
+<U0025><U006D><U0025><U0074><U0025><U0066>"
+END LC_NAME
+
+LC_ADDRESS
+postal_fmt    "<U0025><U0066><U0025><U004E><U0025><U0061><U0025><U004E>/
+<U0025><U0064><U0025><U004E><U0025><U0062><U0025><U004E><U0025><U0073>/
+<U0020><U0025><U0068><U0020><U0025><U0065><U0020><U0025><U0072><U0025>/
+<U004E><U0025><U007A><U0020><U0025><U0054><U0025>/
+<U004E><U0025><U0063><U0025><U004E>"
+country_ab2 "<U0052><U0055>"
+country_ab3 "<U0052><U0055><U0053>"
+country_num 643
+END LC_ADDRESS
