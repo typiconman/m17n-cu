@@ -24,10 +24,6 @@
 ;;; @image html cu-kbd.png "Keyboard Layout"
 ;;; @image latex cu-kbd.eps "Keyboard Layout" width=\narrowwidth
 
-;;; XXX: This Code uses certain components scheduled for inclusion in a future
-;;; version of the Unicode standard. See http://www.unicode.org/alloc/Pipeline.html for info.
-;;; As such, it is BETA-STAGE SOFTWARE and is intended for software testing purposes ONLY.
-
 (input-method cu kbd)
 
 (author "Ponomar Project SCI")

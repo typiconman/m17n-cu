@@ -1,0 +1,239 @@
+;; ru-phonext.mim -- Russian Extended input method with YAWERTY keyboard layout
+;; Copyright (C) 2017-2018
+;; Based in part on Russian input method Copyright (C) 2006
+;; National Institute of Advanced Industrial Science and Technology (AIST)
+;; Registration Number H15PRO112
+
+;; This file is part of the Ponomar Project. See http://sci.ponomar.net/.
+
+;; Ponomar is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation; either version 2, or (at
+;; your option) any later version.
+
+;; Ponomar is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with Ponomar; see the file LICENSE.  If not, write to
+;; the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+;;; Input method for Church Slavic by extending the Russian phonetic keyboard,
+;;; which is based on Roman transcription by phonetic resemblance.
+;;;
+;;; @image html ru-ext.png "Keyboard Layout"
+;;; @image latex ru-ext.eps "Keyboard Layout" width=\narrowwidth
+
+;; юЮ 1!  2@  3ё  4Ё  5ъ  6Ъ  7&  8*  9(  0)  -_  чЧ  
+;;	  яЯ  вВ  еЕ  рР  тТ  ыЫ  уУ  иИ  оО  пП  шШ  щЩ  эЭ
+;;	   аА  сС  дД  фФ  гГ  хХ  йЙ  кК  лЛ  ;:  '"
+;;	     зЗ  ьЬ  цЦ  жЖ  бБ  нН  мМ  ,<  .>  /?  
+;;  This level is based on ru_phonetic map in XKB of Xorg.
+;; AltGr level
+;;  DEAD ~	҂[zwj]   ◌҃꙾  ◌̀◌҆̀   ◌҇◌꙼  ◌҆◌̾  ◌̑ⸯ  ◌́◌҆́  ѿѾ  ѡѠ ᲂ◌ⷪ҇ ꙍꙌ  џЏ  
+;;	  ѧѦ  ◌ⷡ҇ᲀ  єЄ  ◌ⷬ҇  ᲅᲄ  ѵѴ  ꙋꙊ  іІ ѻѺ  ѱѰ  ◌ⷲ҇🕂  ◌ⷳ҇🕃  ѣѢ
+;;	   ꙗꙖ  ◌ⷭ҇ᲃ  ◌ⷣᲁ  ѳѲ  ◌ⷢ҇🕁  ◌ⷯ🕄  їЇ  ѯѮ  ◌ⷧ҇  ◌̏◌᷀ ꙳✠   
+;;	     ѕЅ   ◌꙽ꙿ   ꙁꙀ  ◌ⷤ  ◌ⷠ҇    ◌ⷩ҇🕀  ◌ⷨ🕅  ꙟꙞ  ѽѼ  ѫѪ  
+;;
+
+(input-method ru phonext)
+
+(description
+ "Input method for Church Slavic by extending the Russian phonetic keyboard,
+  which is based on Roman transcription by phonetic resemblance.
+
+  First level:
+ юЮ  1!  2@  3ё  4Ё  5ъ  6Ъ  7&  8*  9(  0)  -_  чЧ  
+      яЯ  вВ  еЕ  рР  тТ  ыЫ  уУ  иИ  оО  пП  шШ  щЩ  эЭ
+       аА  сС  дД  фФ  гГ  хХ  йЙ  кК  лЛ  ;:  '\" 
+         зЗ  ьЬ  цЦ  жЖ  бБ  нН  мМ  ,<  .>  /?
+
+This level is based on ru_phonetic map in XKB of Xorg.
+
+  AltGr level:
+    <DEAD>~ ҂[zwj]   ◌҃꙾  ◌̀◌҆̀   ◌҇◌꙼  ◌҆◌̾  ◌̑ⸯ  ◌́◌҆́  ѿѾ  ѡѠ ᲂ◌ⷪ҇ ꙍꙌ  џЏ 
+	  ѧѦ  ◌ⷡ҇ᲀ  єЄ  ◌ⷬ҇  ᲅᲄ  ѵѴ  ꙋꙊ  іІ ѻѺ  ѱѰ  ◌ⷲ҇🕂  ◌ⷳ҇🕃  ѣѢ
+	   ꙗꙖ  ◌ⷭ҇ᲃ  ◌ⷣᲁ  ѳѲ  ◌ⷢ҇🕁  ◌ⷯ🕄  їЇ  ѯѮ  ◌ⷧ҇  ◌̏◌᷀ ꙳✠   
+	     ѕЅ   ◌꙽ꙿ   ꙁꙀ  ◌ⷤ  ◌ⷠ҇    ◌ⷩ҇🕀  ◌ⷨ🕅  ꙟꙞ  ѽѼ  ѫѪ")
+
+(title "Ѧ")
+
+(map
+ (map
+  ("#" ?ё)
+  ("$" ?Ё)
+  ("%" ?ъ)
+  ("^" ?Ъ)
+  ("=" ?ч)
+  ("+" ?Ч)
+  ("`" ?ю)
+  ("~" ?Ю)
+  ("q" ?я)
+  ("Q" ?Я)
+  ("w" ?в)
+  ("W" ?В)
+  ("e" ?е)
+  ("E" ?Е)
+  ("r" ?р)
+  ("R" ?Р)
+  ("t" ?т)
+  ("T" ?Т)
+  ("y" ?ы)
+  ("Y" ?Ы)
+  ("u" ?у)
+  ("U" ?У)
+  ("i" ?и)
+  ("I" ?И)
+  ("o" ?о)
+  ("O" ?О)
+  ("p" ?п)
+  ("P" ?П)
+  ("[" ?ш)
+  ("{" ?Ш)
+  ("]" ?щ)
+  ("}" ?Щ)
+  ("a" ?а)
+  ("A" ?А)
+  ("s" ?с)
+  ("S" ?С)
+  ("d" ?д)
+  ("D" ?Д)
+  ("f" ?ф)
+  ("F" ?Ф)
+  ("g" ?г)
+  ("G" ?Г)
+  ("h" ?х)
+  ("H" ?Х)
+  ("j" ?й)
+  ("J" ?Й)
+  ("k" ?к)
+  ("K" ?К)
+  ("l" ?л)
+  ("L" ?Л)
+  ("\\" ?э)
+  ("|" ?Э)
+  ("z" ?з)
+  ("Z" ?З)
+  ("x" ?ь)
+  ("X" ?Ь)
+  ("c" ?ц)
+  ("C" ?Ц)
+  ("v" ?ж)
+  ("V" ?Ж)
+  ("b" ?б)
+  ("B" ?Б)
+  ("n" ?н)
+  ("N" ?Н)
+  ("m" ?м)
+  ("M" ?М)
+;; AltGr and AltGr+Shift levels
+;; NB: on some systems, alt+grave is used as a hotkey
+;; to disable this function, go to dconf and remove the offending setting in 
+;; e.g. /org/cinammon/muffin/keybindings
+  ((A-`) 0x25CC) ((A-~) 0x007E) ;; this is the dead key
+  ((A-1) 0x0482) ((A-!) 0x200D)
+  ((A-2) 0x0483) ((A-@) 0xA67E)
+  ((A-3) 0x0300) ((A-#) 0x0486 0x0300)
+  ((A-4) 0x0487) ((A-$) 0xA67C)
+  ((A-5) 0x0486) ((A-%) 0x033E)
+  ((A-6) 0x0311) ((A-^) 0x2E2F)
+  ((A-7) 0x0301) ((A-&) 0x0486 0x0301)
+  ((A-8) 0x047F) ((A-*) 0x047E)
+  ((A-9) 0x0461) ((A-\() 0x0460)
+  ((A-0) 0x1C82) ((A-\)) 0x2DEA 0x0487)
+  ((A--) 0xA64D) ((A-_) 0xA64C)
+  ((A-=) 0x045F) ((A-+) 0x040F)
+  ((A-q) 0x0467) ((A-Q) 0x0466)
+  ((A-w) 0x2DE1 0x0487) ((A-W) 0x1C80)
+  ((A-e) 0x0454) ((A-E) 0x0404)
+  ((A-r) 0x2DEC 0x0487)
+  ((A-t) 0x1C85) ((A-T) 0x1C84)
+  ((A-y) 0x0475) ((A-Y) 0x0474)
+  ((A-u) 0xA64B) ((A-U) 0xA64A)
+  ((A-i) 0x0456) ((A-I) 0x0406)
+  ((A-o) 0x047B) ((A-O) 0x047A)
+  ((A-p) 0x0471) ((A-P) 0x0470)
+  ((A-[) 0x2DF2 0x0487) ((A-{) 0x1F542)
+  ((A-]) 0x2DF3 0x0487) ((A-}) 0x1F543)
+  ((A-\\) 0x0463) ((A-|) 0x0462)
+  ((A-a) 0xA657) ((A-A) 0xA656)
+  ((A-s) 0x2DED 0x0487) ((A-S) 0x1C83)
+  ((A-d) 0x2DE3) ((A-D) 0x1C81)
+  ((A-f) 0x0473) ((A-F) 0x0472)
+  ((A-g) 0x2DE2 0x0487) ((A-G) 0x1F541)
+  ((A-h) 0x2DEF) ((A-H) 0x1F544)
+  ((A-j) 0x0457) ((A-J) 0x0407)
+  ((A-k) 0x46F) ((A-K) 0x046E)
+  ((A-l) 0x2DE7 0x0487)
+  ((A-\;) 0x030F) ((A-:) 0x1DC0)
+  ((A-') 0xA673) ((A-\") 0x2720) ;;"
+  ((A-z) 0x0455) ((A-Z) 0x0405)
+  ((A-x) 0xA67D) ((A-X) 0xA67F)
+  ((A-c) 0xA641) ((A-C) 0xA640)
+  ((A-v) 0x2DE4)
+  ((A-b) 0x2DE0 0x0487)
+  ((A-n) 0x2DE9 0x0487) ((A-N) 0x1F540)
+  ((A-m) 0x2DE8) ((A-M) 0x1F545)
+  ((A-,) 0xA65F) ((A-<) 0xA65E)
+  ((A-.) 0x047D) ((A->) 0x047C)
+  ((A-/) 0x046B) ((A-?) 0x046A)
+  ;; Shift-space and Alt-space
+  ((S-\ ) 0x00A0)		; no-break space
+  ((A-\ ) 0x202F)		; narrow no-break space
+  ;; implementation of the dead key. This key creates superscript letters
+  ((A-` a) 0x2DF6)   ((A-` A) 0x2DF6)
+  ((A-` b) 0x2DE0)   ((A-` B) 0x2DE0)
+  ((A-` w) 0x2DE1)  ((A-` W)  0x2DE1)
+  ((A-` g) 0x2DE2)  ((A-` G)  0x2DE2)
+  ((A-` d) 0x2DE3)   ((A-` D) 0x2DE3)
+  ((A-` e) 0x2DF7)  ((A-` E) 0x2DF7)
+  ((A-` A-e) 0xA674)  ((A-` A-E) 0xA674)
+  ((A-` v) 0x2DE4)  ((A-` V)  0x2DE4)
+  ((A-` z) 0x2DE5) ((A-` Z) 0x2DE5)
+  ((A-` i) 0xA675)  ((A-` I) 0xA675)
+  ((A-` j) 0xA675)  ((A-` J) 0xA675)
+  ((A-` A-i) 0xA676)  ((A-` A-I) 0xA676)
+  ((A-` k) 0x2DE6)  ((A-` K) 0x2DE6)
+  ((A-` l) 0x2DE7)  ((A-` L) 0x2DE7)
+  ((A-` m) 0x2DE8)  ((A-` M)  0x2DE8)
+  ((A-` n) 0x2DE9)  ((A-` N)  0x2DE9)
+  ((A-` o) 0x2DEA)  ((A-` O) 0x2DEA)
+  ((A-` A-o) 0x2DEA) ((A-` A-O) 0x2DEA)
+  ((A-` A-0) 0x2DEA)
+  ((A-` A-9) 0xA67B) ((A-` A-\() 0xA67B)
+  ((A-` A-\-) 0xA67B)  ((A-` A-_) 0xA67B)
+  ((A-` p) 0x2DEB) ((A-` P) 0x2DEB)
+  ((A-` r) 0x2DEC)  ((A-` R)  0x2DEC)
+  ((A-` s) 0x2DED)  ((A-` S)  0x2DED)  ((A-` A-S) 0x2DED)
+  ((A-` t) 0x2DEE)  ((A-` T)  0x2DEE)
+  ((A-` A-t) 0x2DEE) ((A-` A-T) 0x2DEE)
+  ((A-` u) 0xA677) ((A-` U) 0xA677)
+  ((A-` A-u) 0x2DF9)  ((A-` A-U) 0x2DF9)
+  ((A-` f) 0xA69E) ((A-` F) 0xA69E)
+  ((A-` h) 0x2DEF)  ((A-` H)  0x2DEF)
+  ((A-` c) 0x2DF0)  ((A-` C)  0x2DF0)
+  ((A-` =) 0x2DF1)  ((A-` +)  0x2DF1)
+  ((A-` [) 0x2DF2)  ((A-` {) 0x2DF2)
+  ((A-` ]) 0x2DF3)  ((A-` }) 0x2DF3)
+  ((A-` %) 0xA678)  ((A-` ^) 0xA678)
+  ((A-` y) 0xA679) ((A-` Y) 0xA679)
+  ((A-` x) 0xA67A) ((A-` X) 0xA67A)
+  ((A-` A-\\) 0x2DFA) ((A-` A-|) 0x2DFA)
+  ((A-` `) 0x2DFB) ((A-` ~) 0x2DFB)
+  ((A-` A-q) 0x2DFD) ((A-` A-Q) 0x2DFD)
+  ((A-` A-a) 0x2DFC) ((A-` A-A) 0x2DFC)
+  ((A-` A-/) 0x2DFE) ((A-` A-?) 0x2DFE)
+  ((A-` A-f) 0x2DF4) ((A-` A-F) 0x2DF4)
+))
+
+(state
+ (init
+  (map)))
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: lisp
+;; End:
