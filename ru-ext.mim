@@ -1,10 +1,10 @@
 ;; ru-ext.mim -- Russian Extended input method based on Russian keyboard layout
-;;   Copyright (C) 2014 Aleksandr Andreev
+;;   Copyright (C) 2014-2018 Aleksandr Andreev
 ;;   Based in part on Russian input method Copyright (C) 2005
 ;;   National Institute of Advanced Industrial Science and Technology (AIST)
 ;;   Registration Number H15PRO112
 
-;; This file is part of the Ponomar Project. See http://www.ponomar.net/.
+;; This file is part of the Ponomar Project. See http://sci.ponomar.net/.
 
 ;; Ponomar is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -26,10 +26,6 @@
 ;;; @image html ru-ext.png "Keyboard Layout"
 ;;; @image latex ru-ext.eps "Keyboard Layout" width=\narrowwidth
 
-;;; XXX: This Code uses certain components scheduled for inclusion in a future
-;;; version of the Unicode standard. See http://www.unicode.org/alloc/Pipeline.html for info.
-;;; As such, it is BETA-STAGE SOFTWARE and is intended for software testing purposes ONLY.
-
 (input-method ru ext)
 
 (author "Ponomar Project SCI")
@@ -37,17 +33,24 @@
 (description
  "Extended Russian input method for typing modern 
   and historical Cyrillic.
- DEAD 1! 2\" 3№ 4; 5% 6: 7? 8* 9( 0) -_ =+ 
+  Расширенная русская клавиатурная раскладка для
+  набора современной и исторической кириллицы.
+ [DEAD]~ 1! 2\" 3№ 4; 5% 6: 7? 8* 9( 0) -_ =+ 
    Й  Ц  У  К  Е  Н  Г  Ш  Щ  З  Х  Ъ \\/
     Ф  Ы  В  А  П  Р  О  Л  Д  Ж  Э
       Я  Ч  С  М  И  Т  Ь  Б  Ю  .,
  Dead key converts letter to superscript (without pokrytie).
+ Мертвая клавиша переводит букву в выносную (без покрытия).
  Historical letters and commonly used superscripts 
  (with pokrytie) on Alt and AltShift:
-   ҂[zwj] ◌҃꙾ ◌̀◌҆̀ ◌҇◌꙼ ◌҆◌̑  ◌̏◌᷀  ◌́◌҆́ ѿѾ ѡѠ ᲂ◌ⷪ҇  ꙍꙌ ꙳✠ 
+ Исторические буквы и часто употребляемые выносные
+ (с покрытием) на клавишах Alt и AltShift:
+  ёЁ ҂[zwj] ◌҃꙾ ◌̀◌҆̀ ◌҇◌꙼ ◌҆◌̑  ◌̏◌᷀  ◌́◌҆́ ѿѾ ѡѠ ᲂ◌ⷪ҇  ꙍꙌ ꙳✠ 
    їЇ ꙁꙀ ꙋꙊ  ѯѮ  єЄ ◌ⷩ҇🕀 ◌ⷢ҇🕁 ◌ⷲ҇🕂 ◌ⷳ҇🕃 ѕЅ ◌ⷯ🕄 ◌̾ⸯ  ѽѼ
      ѳѲ ѵѴ ◌ⷡ҇ᲀ ꙗꙖ ѱѰ ◌ⷬ҇ ѻѺ ◌ⷧ҇ ◌ⷣᲁ ◌ⷤ ѣѢ
             ѧѦ џЏ ◌ⷭ҇ᲃ ◌ⷨ🕅 іІ ᲅᲄ ◌꙽ꙿ ◌ⷠ҇ ѫѪ ꙟꙞ 
+ See also the documentation at http://sci.ponomar.net/
+ См. также документацию на сайте http://sci.ponomar.net/
 ")
 
 (title "RU")
@@ -101,7 +104,7 @@
   (")" ?\))
   ("_" ?_)
   ("+" ?+)
-  ("~" 0x25CC)  ;; this is reserved for a future dead state
+  ("~" 0x007e)  ;; this is useful for LaTeX
   ("Q" ?Й)
   ("W" ?Ц)
   ("E" ?У)
@@ -137,6 +140,9 @@
   (">" ?Ю)
   ("?" ?,)
 ;; AltGr and AltGr+Shift levels
+;; NB: on some systems, alt+grave is used as a hotkey
+;; to disable this function, go to dconf and remove the offending setting in 
+;; e.g. /org/cinammon/muffin/keybindings
    ((A-`) 0x0451) ((A-~) 0x0401) 
    ((A-1) 0x0482) ((A-!) 0x200D)
    ((A-2) 0x0483) ((A-@) 0xA67E)
