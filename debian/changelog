@@ -1,0 +1,6 @@
+m17n-cu (1.0) unstable; urgency=medium
+
+  * Initial Release.
+  * This provides m17n library files for Church Slavonic for Debian-bases systems
+
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Fri, 29 Dec 2017 20:23:14 +0300

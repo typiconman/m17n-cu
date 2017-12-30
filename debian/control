@@ -1,0 +1,21 @@
+Source: m17n-cu
+Section: text
+Priority: optional
+Maintainer: Aleksandr Andreev <aleksandr.andreev@gmail.com>
+Build-Depends: m17n-db, debhelper (>= 9.0.0)
+Standards-Version: 3.9.5
+Vcs-Git: https://github.com/typiconman/m17n-cu.git
+Vcs-browser: https://github.com/typiconman/m17n-cu.git
+Homepage: http://sci.ponomar.net/
+
+Package: m17n-cu
+Architecture: all
+Depends: m17n-db, ${misc:Depends}
+Recommends: ibus-m17n
+Description: Church Slavonic data for m17n libarary
+ This package provides collation data and keyboard layouts
+ for support of the Church Slavonic language.
+ See http://sci.ponomar.net/ for documentation of keyboard layouts.
+ .
+ Developed by the Slavonic Computing Initiative.
+
