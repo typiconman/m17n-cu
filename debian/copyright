@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Name: m17n-cu
-Maintainer: Aleksandr Andreev <aleksandr.andreev@gmail.com>
+Upstream-Name: m17n-cu
+Upstream-Contact: Aleksandr Andreev <aleksandr.andreev@gmail.com>
 Source: https://github.com/typiconman/m17n-cu
 
 Files: *

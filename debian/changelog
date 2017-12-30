@@ -1,6 +1,12 @@
+m17n-cu (1.0.1) unstable; urgency=medium
+
+  * Fixing buggy installation of deb package 
+
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Sat, 30 Dec 2017 16:41:02 +0300
+
 m17n-cu (1.0) unstable; urgency=medium
 
   * Initial Release.
-  * This provides m17n library files for Church Slavonic for Debian-bases systems
+  * Fix debian packaging files.
 
  -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Fri, 29 Dec 2017 20:23:14 +0300
