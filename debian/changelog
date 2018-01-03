@@ -1,3 +1,9 @@
+m17n-cu (1.1.0) unstable; urgency=medium
+
+  * Adding Glagolitic keyboard drivers for m17n
+
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Wed, 3 Jan 2018 10:48:16 +0300
+
 m17n-cu (1.0.1) unstable; urgency=medium
 
   * Fixing buggy installation of deb package 

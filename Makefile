@@ -11,15 +11,17 @@ install:
 	$(INSTALL) -Dm644 *.lnm $(DEST)
 	$(INSTALL) -Dm644 icons/*.png $(ICONDEST)
 	$(INSTALL) -Dm644 cu_RU $(LOCALEDEST)
-	# To create debian package run debuild -us -uc
+	# To create debian package run debuild -uc -us --lintian-opts --profile debian
 
 clean:
 	# THIS IS THE SAFE WAY TO REMOVE
 	rm -fr $(DEST)/cu-kbd.mim
+	rm -fr $(DEST)/cu-glag.mim
 	rm -fr $(DEST)/ru-ext.mim
 	rm -fr $(DEST)/ru-phonext.mim
 	rm -fr $(DEST)/cu.lnm
 	rm -fr $(ICONDEST)/cu-kbd.png
+	rm -fr $(ICONDEST)/cu-glag.png
 	rm -fr $(ICONDEST)/ru-ext.png
 	rm -fr $(ICONDEST)/ru-phonext.png
 	rm -fr $(LOCALEDEST)/cu_RU 
