@@ -8,12 +8,12 @@ This repository contains data for Church Slavic multilingualization for GNU-Linu
 The following is supported:
 * Language data for Church Slavic
 * Church Slavic localization for GNU/Linux
-* Conversion of legacy encodings to Unicode
 * Church Slavic input methods for IBUS / m17n
+  (This is probably the **only** part that is really useful for you, the user).
 
 This software is part of the Ponomar Project's Slavonic Computing Initiative. See http://www.ponomar.net/cu_support.html for more information.
 
-Copyright 2014 Aleksandr Andreev.
+Copyright 2014, 2018 Aleksandr Andreev.
 Portions Copyright 2014 Daniel Dremachyov, Yuri Shardt, Nikita Simmons, et al.
 This software is part of the Ponomar Project.
 
@@ -31,6 +31,7 @@ You should have received a copy of the GNU General Public License
 along with Ponomar.  If not, see <http://www.gnu.org/licenses/>.
 
 ===
+
 For Installation instructions, see the INSTALL file.
 For detailed Documentation, see docen.pdf available at
 http://www.ponomar.net/files/docen.pdf

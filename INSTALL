@@ -1,4 +1,4 @@
-Copyright 2014 Aleksandr Andreev,
+Copyright 2014, 2018 Aleksandr Andreev,
 with portions Copyright 2014 Daniel Dremachyov, Yuri Shardt, Nikita Simmons.
 
    This file is free documentation; the authors give
@@ -14,18 +14,24 @@ data to the  m17n library, which realizes multilingualization for
 GNU-Linux/Unix applications.
 
 If you use Microsoft Windows or Apple OS X, this is NOT the package you need. 
-Please see http://www.ponomar.net/ for software for other operating systems.
+Please see http://sci.ponomar.net/ for software for other operating systems.
 
 Installation Instructions
 =============================
 
-Step 1. Download and install the the ibus-m17n package.
-On most distributions, this can be done from the package manager, e.g.:
+Step 0. Installation on Debain-based systems can now be done
+via the SCI repository. See http://sci.ponomar.net/keyboard.html
+for more information.
+
+Step 1. On other systems (Fedora, CentOS, etc.), you can do a manual install.
+Download and install the the ibus-m17n package.
+On most distributions, this can be done from the package manager, e.g.,
+on Debian-based systems:
 
 $ sudo apt-get install ibus-m17n 
 
-Or you can download the latest source code from here:
-https://code.google.com/p/ibus/
+But you can also download the latest source code from here:
+https://github.com/ibus/ibus/wiki
 
 and follow the installation instructions there.
 
@@ -41,22 +47,25 @@ The m17n data should be installed in your /usr/share/m17n/ directory:
 
 $ ls /usr/share/m17n/
 
-If not, you will need to find your m17n data directory and modify 
-lines 2 and 3 of Makefile in the directory where you downloaded this package.
+If not, you will need to find your m17n data directory and set 
+DESTDIR in Step 4 to the appropriate directory.
 
 Step 4. Install the Slavonic m17n data:
 
 In the directory where you have downloaded the files of this package, run:
 
-$ sudo make install
+$ sudo make install DESTDIR=/
 
-This copies cu-kbd.mim and a number of other data files to your m17n data directory.
+This copies the Church Slavonic data into /usr/share/m17n/.
 
-Step 5. Log out from your session and log back in.
+Step 5. Log out from your session and log back in. Actually, this is probably 
+unnecessary, and it may be sufficient to just run:
+
+$ ibus restart
 
 IBus will re-read the m17n data directory and find the newly installed data files.
 
-Step 6. Load the Slavonic input method
+Step 6. Load the keyboard layout(s) you wish to use
 
 Run:
 
@@ -68,10 +77,12 @@ Click on Show all input methods.
 Scroll down and select: 
 * For Church Slavic input method:
    Church Slavic; Old Slavonic; Old Church Slavonic
-   Select the kbd (m17n) variant (the only variant currently available)
+   Select the kbd (m17n) variant (for Cyrillic)
+   or the glag (m17n) variatn (for Glagolitic) <--- THIS IS EXPERIMENTAL
 * For Russian Extended input method:
    Russian
-   Select the ext (m17n) variant
+   Select the ext (m17n) variant (for standard Russian ЙЦУКЕН)
+   or the phonext (m17n) variant (for phonetic Russian ЯВЕРТЫ)
 Click Add
 Click Close
 
@@ -90,14 +101,16 @@ $ ibus-setup
 
 and changing the options on the General tab.
 
-The Slavonic input method is described in detail in
+The key mappings are described in detail in
 http://www.ponomar.net/files/docen.pdf.
 
-If you are doing serious work typesetting Church Slavic, you should read
-our Roadmap for Slavonic Typography in the Unicode Standard, available on
-http://www.ponomar.net/
+If you are doing serious work typesetting Church Slavonic, you should read
+Unicode Technical Note 41 available at
+https://www.unicode.org/notes/tn41/
+so that you don't make silly mistakes.
 
-We also suggest installing the Hirmos Ponomar and other Unicode fonts.
+We also suggest installing Ponomar Unicode and other Unicode fonts
+available at http://sci.ponomar.net/fonts.html.
 
 
 Modification instructions
@@ -108,19 +121,25 @@ modify it under the terms of the GNU General Public License.
 
 Should you choose to modify the keyboard layout, note that:
 
-The file that contains the input method data is cu-kbd.mim.
+The file that contains the input method data is the .mim file 
+(for example, for the Church Slavonic layout, cu-kbd.mim).
 It is written in a LIPS-like language.
 The format is fairly self-explanatory.
 For details, see the m17n library documentation at:
 http://www.nongnu.org/m17n/
 
+Good luck.
 
 Uninstallation instructions
 ============================
 
 Should you wish to remove the software:
 
-Step 1. 
+Step 0. If you used the package manager, it is as simple as:
+
+$ sudo apt-get remove m17n-cu
+
+Step 1. Otherwise:
 
 Run 
 
@@ -143,7 +162,7 @@ Step 3.
 
 You can get rid of the m17n Slavonic data by running:
 
-$ sudo make uninstall
+$ sudo make uninstall DESTDIR=/
 
 from the directory where you downloaded the source code.
 
@@ -151,7 +170,7 @@ Or you can delete the files by hand from your m17n data directory,
 which is usually /usr/share/m17n/
 
 You assume all responsibility for any rm commands you run as sudo.
-Please be careful.
+Please be careful. You can do damage to your system.
 
 Bug reports, Comments, etc.
 ============================
