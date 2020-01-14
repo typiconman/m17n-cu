@@ -1,0 +1,103 @@
+;; cu-znamstd.mim -- Znamenny Notation keyboard layout
+;;  This is a standard keyboard layout designed by Aleksandr Andreev
+;;  and Nikita Simmons.
+;;
+;; Copyright (c) 2020 Aleksandr Andreev.
+;;
+;; This file is part of the Ponomar Project. See https://sci.ponomar.net/.
+
+;; Ponomar is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation; either version 2, or (at
+;; your option) any later version.
+
+;; Ponomar is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with Ponomar; see the file LICENSE.  If not, write to
+;; the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+;;; @image html cu-znamstd.png "Keyboard Layout"
+;;; @image latex cu-znamstd.eps "Keyboard Layout" width=\narrowwidth
+
+(input-method cu znamstd)
+
+(author "Ponomar Project SCI")
+
+(description
+ "Standard Znamenny Notation keyboard layout.
+  Стандартная клавиатурная раскладка для знаменной нотации.
+  See also the documentation at https://sci.ponomar.net/
+  См. также документацию на сайте https://sci.ponomar.net/
+")
+
+(title "ZNAM")
+
+(map
+ (map
+  ("`" 0x1CF22) ("~" 0x1CF41)
+  ("1" 0x1CF00) ("!" 0x1CF0C)
+  ("2" 0x1CF01) ("@" 0x1CF0D)
+  ("3" 0x1CF02) ("#" 0x1CF0E) ((A-3) 0x1CF18)
+  ("4" 0x1CF03) ("$" 0x1CF0F)
+  ("5" 0x1CF04) ("%" 0x1CF10)
+  ("6" 0x1CF05) ("^" 0x1CF11)
+  ("7" 0x1CF06) ("&" 0x1CF12) ((A-7) 0x1CF19)
+  ("8" 0x1CF07) ("*" 0x1CF13) ((A-8) 0x1CF1A)
+  ("9" 0x1CF08) ("(" 0x1CF14) ((A-9) 0x1CF1B)
+  ("0" 0x1CF09) (")" 0x1CF15)
+  ("-" 0x1CF0A) ("_" 0x1CF16)
+  ("=" 0x1CF0B) ("+" 0x1CF17)
+  ;; end of first row
+  ("q" 0x1CF83) ("Q" 0x1CF82) ((A-q) 0x1CFC1) ((A-Q) 0x1CFC2)
+  ("w" 0x1CF75) ("W" 0x1CF76) ((A-w) 0x1CF77) ((A-W) 0x1CF78)
+  ("e" 0x1CF95) ("E" 0x1CF96) ((A-e) 0x1CF97)
+  ("r" 0x1CFA5) ("R" 0x1CFA6)
+  ("t" 0x1CFAC) ("T" 0x1CFAD) ((A-t) 0x1CFAE)
+  ("y" 0x1CFA7) ("Y" 0x1CFA8) ((A-y) 0x1CFA0) ((A-Y) 0x1CFAA)
+  ("u" 0x1CF6F) ("U" 0x1CF6E)
+  ("i" 0x1CF5C) ("I" 0x1CF6D) ((A-i) 0x1CF6B) ((A-I) 0x1CF6C)
+  ("o" 0x1CF26) ("O" 0x1CF27) ((A-o) 0x1CF2A)
+  ("p" 0x1CF70) ("P" 0x1CF53) ((A-p) 0x1CFC3) ((A-P) 0x1CF86 0x1CFC3)
+  ("[" 0x1CF23) ("{" 0x1CF24) ((A-[) 0x1CF25)
+  ("]" 0x1CF28) ("}" 0x1CF29) ((A-]) 0x1CF2B)
+  ("\\" 0x1CFAF) ("|" 0x1CFB0) ((A-\\) 0x1CFB1)
+  ;; end of second row
+  ("a" 0x1CF52) ("A" 0x1CF81)
+  ("s" 0x1CF56) ("S" 0x1CF57) ((A-s) 0x1CF58) ((A-S) 0x1CF59)
+  ("d" 0x1CF63) ("D" 0x1CF64) ((A-d) 0x1CF65) ((A-D) 0x1CF66)
+  ("f" 0x1CF67) ("F" 0x1CF68) ((A-f) 0x1CF69) ((A-F) 0x1CF6A)
+  ("g" 0x1CF5D) ("G" 0x1CF5E) ((A-g) 0x1CF5F) ((A-G) 0x1CF60)
+  ("h" 0x1CF92) ("H" 0x1CF93) ((A-h) 0x1CF84)
+  ("j" 0x1CFA2) ("J" 0x1CFA3)
+  ("k" 0x1CF50) ("K" 0x1CF51) ((A-k) 0x1CF5A) ((A-K) 0x1CF55)
+  ("l" 0x1CF7D) ("L" 0x1CF7E) ((A-l) 0x1CF7F) ((A-L) 0x1CF80)
+  (";" 0x1CF30) (":" 0x1CF31) ((A-;) 0x1CF32)
+  ("'" 0x1CF3C) ("\"" 0x1CF3D) ((A-\') 0x1CF2C)
+  ;; end of third row
+  ("z" 0x1CF86 0x1CF85) ("Z" 0x1CF85) ((A-z) 0x1CF61) ((A-Z) 0x1CF62)
+  ("x" 0x1CF5B) ("X" 0x1CF54) ((A-x) 0x1CFB3) ((A-X) 0x1CFB4)
+  ("c" 0x1CF71) ("C" 0x1CF72) ((A-c) 0x1CF73) ((A-C) 0x1CF74)
+  ("v" 0x1CF79) ("V" 0x1CF7A) ((A-v) 0x1CF7B) ((A-V) 0x1CF7C)
+  ("b" 0x1CF86) ("B" 0x1CF86 0x1CF30) ((A-b) 0x1CF86 0x1CF31) ((A-B) 0x1CF91)
+  ("n" 0x1CF88) ("N" 0x1CF87) ((A-n) 0x1CF89) ((A-N) 0x1CF8A)
+  ("m" 0x1CF90) ("M" 0x1CF90 0x1CF30) ((A-m) 0x1CF8B) ((A-M) 0x1CF8B 0x1CF30)
+  ("," 0x1CF3A) ("<" 0x1CF3B)
+  ("." 0x1CF36) (">" 0x1CF38) ((A-.) 0x1CF39)
+  ("/" 0x1CF35) ("?" 0x1CF33) ((A-/) 0x1CF34)
+  ;; end of fourth row
+ )
+)
+
+(state
+ (init
+  (map)))
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: lisp
+;; End:

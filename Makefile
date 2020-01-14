@@ -16,12 +16,16 @@ install:
 clean:
 	# THIS IS THE SAFE WAY TO REMOVE
 	rm -fr $(DEST)/cu-kbd.mim
+	rm -fr $(DEST)/cu-znamstd.mim
+	rm -fr $(DEST)/cu-znamprklht.mim
 	rm -fr $(DEST)/cu-glag.mim
 	rm -fr $(DEST)/ru-ext.mim
 	rm -fr $(DEST)/ru-phonext.mim
 	rm -fr $(DEST)/cu.lnm
 	rm -fr $(ICONDEST)/cu-kbd.png
 	rm -fr $(ICONDEST)/cu-glag.png
+	rm -fr $(ICONDEST)/cu-znamstd.png
+	rm -fr $(ICONDEST)/cu-znamprklht.png
 	rm -fr $(ICONDEST)/ru-ext.png
 	rm -fr $(ICONDEST)/ru-phonext.png
 	rm -fr $(LOCALEDEST)/cu_RU 

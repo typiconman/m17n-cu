@@ -1,4 +1,4 @@
-Copyright 2014, 2018 Aleksandr Andreev,
+Copyright 2014, 2018, 2020 Aleksandr Andreev,
 with portions Copyright 2014 Daniel Dremachyov, Yuri Shardt, Nikita Simmons.
 
    This file is free documentation; the authors give
@@ -14,13 +14,13 @@ data to the  m17n library, which realizes multilingualization for
 GNU-Linux/Unix applications.
 
 If you use Microsoft Windows or Apple OS X, this is NOT the package you need. 
-Please see http://sci.ponomar.net/ for software for other operating systems.
+Please see https://sci.ponomar.net/ for software for other operating systems.
 
 Installation Instructions
 =============================
 
 Step 0. Installation on Debain-based systems can now be done
-via the SCI repository. See http://sci.ponomar.net/keyboard.html
+via the SCI repository. See https://sci.ponomar.net/keyboard.html
 for more information.
 
 Step 1. On other systems (Fedora, CentOS, etc.), you can do a manual install.
@@ -102,7 +102,7 @@ $ ibus-setup
 and changing the options on the General tab.
 
 The key mappings are described in detail in
-http://www.ponomar.net/files/docen.pdf.
+https://www.ponomar.net/files/docen.pdf.
 
 If you are doing serious work typesetting Church Slavonic, you should read
 Unicode Technical Note 41 available at
@@ -110,7 +110,7 @@ https://www.unicode.org/notes/tn41/
 so that you don't make silly mistakes.
 
 We also suggest installing Ponomar Unicode and other Unicode fonts
-available at http://sci.ponomar.net/fonts.html.
+available at https://sci.ponomar.net/fonts.html.
 
 
 Modification instructions
