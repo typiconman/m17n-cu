@@ -29,12 +29,12 @@ clean:
 	rm -fr $(ICONDEST)/ru-ext.png
 	rm -fr $(ICONDEST)/ru-phonext.png
 	rm -fr $(LOCALEDEST)/cu_RU 
-	rmdir $(ICONDEST)
-	rmdir $(LOCALEDEST)
-	rmdir $(DEST)
-	rmdir $(DESTDIR)usr/share/i18n
-	rmdir $(DESTDIR)usr/share
-	rmdir $(DESTDIR)usr/
+#	rmdir $(ICONDEST)
+#	rmdir $(LOCALEDEST)
+#	rmdir $(DEST)
+#	rmdir $(DESTDIR)usr/share/i18n
+#	rmdir $(DESTDIR)usr/share
+#	rmdir $(DESTDIR)usr/
 
 uninstall:
 	localedef --delete-from-archive cu_RU.utf8

@@ -3,7 +3,7 @@ Section: text
 Priority: optional
 Maintainer: Aleksandr Andreev <aleksandr.andreev@gmail.com>
 Build-Depends: m17n-db, debhelper (>= 9.0.0)
-Standards-Version: 3.9.5
+Standards-Version: 4.1.4
 Vcs-Git: https://github.com/typiconman/m17n-cu.git
 Vcs-browser: https://github.com/typiconman/m17n-cu.git
 Homepage: https://sci.ponomar.net/

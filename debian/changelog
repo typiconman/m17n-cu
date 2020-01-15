@@ -1,8 +1,14 @@
-m17n-cu (1.2.0) unstable; urgency=medium
+m17n-cu (1.2.1) bionic; urgency=medium
+
+  * Fix Launchpad stupidity
+
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Wed, 15 Jan 2020 13:54:14 +0300
+
+m17n-cu (1.2.0) bionic; urgency=medium
 
   * Adding Znamenny Notation keyboard drivers
 
- -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Wed, 14 Jan 2020 16:18:34 +0300
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Tue, 14 Jan 2020 16:18:34 +0300
 
 m17n-cu (1.1.0) unstable; urgency=medium
 
