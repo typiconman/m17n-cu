@@ -1,3 +1,15 @@
+m17n-cu (1.2.3) bionic; urgency=medium
+
+  * Fix Znamenny Paraklht layout
+
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Wed, 15 Jan 2020 20:34:51 +0300
+
+m17n-cu (1.2.2) bionic; urgency=medium
+
+  * Add Znamenny Paraklht layout
+
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Wed, 15 Jan 2020 20:16:45 +0300
+
 m17n-cu (1.2.1) bionic; urgency=medium
 
   * Fix Launchpad stupidity

@@ -1,4 +1,4 @@
-;; cu-znamprklht.mim -- Znamenny Notation keyboard layout
+;; cu-znampar.mim -- Znamenny Notation keyboard layout
 ;;  This is based on the pseudolayout of the Paraklht font
 ;;  as it is layed out here: <http://znamen.ru/paraklht.pdf>
 ;;
@@ -21,10 +21,10 @@
 ;; the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 ;; Boston, MA 02110-1301, USA.
 
-;;; @image html cu-znamprklht.png "Keyboard Layout"
-;;; @image latex cu-znamprklht.eps "Keyboard Layout" width=\narrowwidth
+;;; @image html cu-znampar.png "Keyboard Layout"
+;;; @image latex cu-znampar.eps "Keyboard Layout" width=\narrowwidth
 
-(input-method cu-znamprklht)
+(input-method cu znampar)
 
 (author "Ponomar Project SCI")
 
