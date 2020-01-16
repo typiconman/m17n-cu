@@ -1,3 +1,9 @@
+m17n-cu (1.2.4) bionic; urgency=medium
+
+  * Fix icons for Paraklht
+
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Thu, 16 Jan 2020 10:46:02 +0300
+
 m17n-cu (1.2.3) bionic; urgency=medium
 
   * Fix Znamenny Paraklht layout
