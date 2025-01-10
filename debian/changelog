@@ -1,3 +1,9 @@
+m17n-cu (1.2.5) noble; urgency=medium
+
+  * Update for noble
+
+ -- Aleksandr Andreev <aleksandr.andreev@gmail.com>  Thu, 09 Jan 2025 22:09:00 +0100
+
 m17n-cu (1.2.4) bionic; urgency=medium
 
   * Fix icons for Paraklht
